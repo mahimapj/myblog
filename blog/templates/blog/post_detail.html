@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+</head>
+<body>
+
+<h1>{{ post.title }}</h1>
+<p><b>Author:</b> {{ post.author }}</p>
+<p><b>Created:</b> {{ post.created_at }}</p>
+<p><b>Updated:</b> {{ post.updated_at }}</p>
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" width="300">
+{% endif %}
+
+<p>{{ post.content }}</p>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>
